@@ -1,16 +1,26 @@
+//ordrnar js.angular.libreriade terceros. nuestro codigo
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { CounterModule } from './counter/counter.module';
+import { HeroesModule } from './heroes/heroes.module';
+
 import { AppComponent } from './app.component';
 
+
+
+//decorador especial
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CounterModule,
+    HeroesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
