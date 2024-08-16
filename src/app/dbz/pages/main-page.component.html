@@ -1,0 +1,18 @@
+<h1>DBZ Main Page</h1>
+<hr />
+
+<div class="row"> <!-- clases que vienen de la importacion del bootstrap -->
+  <div class="col">
+   <!--  no aparece trunks por que era el valor por defecto
+     <dpz-list [characterList]="characters"></dpz-list>-->
+
+     <!-- vas a estar escuchando el evento
+      onDelete conectarlo con el mainpage -->
+     <dpz-list [characterList]="characters"
+                (onDelete)="onDeleteCharacter($event)"></dpz-list>
+  </div>
+
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
